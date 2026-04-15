@@ -100,6 +100,11 @@ main, .hero, .footer, .narrow { max-width: 1240px; margin: 0 auto; padding: 24px
   transition: background .18s ease, border-color .18s ease, transform .18s ease;
 }
 .theme-button.is-active { background: var(--chip-strong); border-color: var(--accent); }
+.topbar-nav a.is-current {
+  background: var(--chip-strong);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  color: var(--accent);
+}
 .topbar-nav a:hover, .theme-button:hover, .page-button:hover, .cta-link:hover, .chip:hover {
   background: var(--chip-strong);
   border-color: color-mix(in srgb, var(--accent) 45%, var(--line));

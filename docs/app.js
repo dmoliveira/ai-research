@@ -35,6 +35,19 @@ function initTheme() {
   });
 }
 
+function initCurrentNav() {
+  const current = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".topbar-nav a").forEach((linkEl) => {
+    const href = linkEl.getAttribute("href") || "";
+    const target = href.split("/").pop() || "index.html";
+    const isCurrent = target === current || (current === "" && target === "index.html");
+    linkEl.classList.toggle("is-current", isCurrent);
+    if (isCurrent) {
+      linkEl.setAttribute("aria-current", "page");
+    }
+  });
+}
+
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 }
@@ -86,6 +99,15 @@ function daysUntil(value) {
   if (!value) return null;
   const ms = new Date(value).getTime() - Date.now();
   return Math.ceil(ms / 86400000);
+}
+
+function relativeDeadlineLabel(value) {
+  const delta = daysUntil(value);
+  if (delta === null) return "rolling";
+  if (delta < 0) return `${Math.abs(delta)} day${Math.abs(delta) === 1 ? "" : "s"} ago`;
+  if (delta === 0) return "today";
+  if (delta === 1) return "tomorrow";
+  return `in ${delta} days`;
 }
 
 function venueMap(conferences, journals) {
@@ -143,13 +165,12 @@ function renderHomeDeadlines(cfps, venues) {
     .slice(0, 6);
   el.innerHTML = sorted.map((item) => {
     const venue = venues.get(item.venue_slug);
-    const delta = daysUntil(item.deadline);
     return `
       <article class="deadline-card stack-sm">
         <div class="inline-meta">${statusBadge(item.status)} <span class="badge">${escapeHtml(item.confidence)}</span></div>
         <h3>${escapeHtml(venue?.short_name || item.venue_slug)}</h3>
         <p class="muted">${escapeHtml(item.track)} · ${escapeHtml(venue?.area || "")}</p>
-        <p><strong>${formatDate(item.deadline)}</strong>${delta !== null ? ` · in ${delta} days` : ""}</p>
+        <p><strong>${formatDate(item.deadline)}</strong>${item.deadline ? ` · ${relativeDeadlineLabel(item.deadline)}` : ""}</p>
         <p class="muted">${escapeHtml(item.notes || "")}</p>
       </article>
     `;
@@ -159,12 +180,15 @@ function renderHomeDeadlines(cfps, venues) {
 function renderHomeConferencePreview(conferences) {
   const body = document.getElementById("home-conference-body");
   if (!body) return;
-  body.innerHTML = conferences.slice(0, 6).map((item) => `
+  const previewRows = [...conferences]
+    .sort((a, b) => compareTier(a.tier, b.tier) || new Date(a.next_deadline || "9999-12-31") - new Date(b.next_deadline || "9999-12-31"))
+    .slice(0, 6);
+  body.innerHTML = previewRows.map((item) => `
     <tr>
       <td data-label="Tier">${escapeHtml(item.tier)}</td>
       <td data-label="Conference">${link(item.short_name, item.website)}<div class="muted">${escapeHtml(item.name)}</div></td>
       <td data-label="Area">${escapeHtml(item.area)}</td>
-      <td data-label="Deadline">${formatDate(item.next_deadline)}</td>
+      <td data-label="Deadline">${formatDate(item.next_deadline)}<div class="muted">${relativeDeadlineLabel(item.next_deadline)}</div></td>
       <td data-label="Event">${formatDate(item.event_date)}</td>
       <td data-label="Acceptance">${escapeHtml(item.acceptance_rate)}</td>
       <td data-label="Status">${statusBadge(item.status)}</td>
@@ -175,14 +199,17 @@ function renderHomeConferencePreview(conferences) {
 function renderHomeJournalPreview(journals) {
   const body = document.getElementById("home-journal-body");
   if (!body) return;
-  body.innerHTML = journals.slice(0, 6).map((item) => `
+  const previewRows = [...journals]
+    .sort((a, b) => compareTier(a.tier, b.tier) || new Date(b.latest_publication_date || 0) - new Date(a.latest_publication_date || 0))
+    .slice(0, 6);
+  body.innerHTML = previewRows.map((item) => `
     <tr>
       <td data-label="Tier">${escapeHtml(item.tier)}</td>
       <td data-label="Journal">${link(item.short_name, item.website)}<div class="muted">${escapeHtml(item.name)}</div></td>
       <td data-label="Area">${escapeHtml(item.area)}</td>
       <td data-label="Publisher">${escapeHtml(item.publisher)}</td>
       <td data-label="OA">${escapeHtml(item.oa_model)}</td>
-      <td data-label="Latest issue">${escapeHtml(item.latest_issue)}</td>
+      <td data-label="Latest issue">${escapeHtml(item.latest_issue)}<div class="muted">${formatDate(item.latest_publication_date)}</div></td>
       <td data-label="Review speed">${escapeHtml(item.review_speed)}</td>
     </tr>
   `).join("");
@@ -477,6 +504,7 @@ function initAreasPage(areas, conferences, journals, cfps) {
 
 async function main() {
   initTheme();
+  initCurrentNav();
   syncTopbarOffset();
   const [meta, conferenceData, journalData, cfpData, featuredData, areaData] = await Promise.all([
     loadJson("./data/meta.json"),
