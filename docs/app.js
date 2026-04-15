@@ -98,13 +98,13 @@ function initTopbarQuickSearch() {
   wrapper.className = "topbar-search";
   wrapper.innerHTML = `
     <select aria-label="Quick search target">
-      <option value="conferences.html">Conferences</option>
-      <option value="journals.html">Journals</option>
+      <option value="conferences.html">Conf</option>
+      <option value="journals.html">Jour</option>
       <option value="cfp.html">CFPs</option>
       <option value="areas.html">Areas</option>
     </select>
     <input type="search" placeholder="Quick search venues…" aria-label="Quick search input" />
-    <button type="submit">Search</button>
+    <button type="submit" aria-label="Run quick search">🔎</button>
   `;
   const select = wrapper.querySelector("select");
   const input = wrapper.querySelector("input");

@@ -123,6 +123,8 @@ main, .hero, .footer, .narrow { max-width: 1240px; margin: 0 auto; padding: 24px
 .theme-toggle {
   grid-area: theme;
   justify-content: flex-end;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 .topbar-search {
   grid-area: search;
@@ -130,25 +132,27 @@ main, .hero, .footer, .narrow { max-width: 1240px; margin: 0 auto; padding: 24px
   align-items: center;
   gap: 8px;
   min-width: 0;
-  width: min(100%, 440px);
+  width: min(100%, 360px);
   justify-self: end;
 }
 .topbar-search input,
 .topbar-search select {
   min-width: 0;
   width: 100%;
-  padding: 10px 12px;
+  padding: 9px 12px;
   border-radius: 999px;
 }
-.topbar-search select { width: 120px; flex: 0 0 120px; }
+.topbar-search input { flex: 1 1 180px; }
+.topbar-search select { width: 96px; flex: 0 0 96px; }
 .topbar-search button {
   border: 1px solid var(--line);
   background: var(--chip);
   color: var(--text);
   border-radius: 999px;
-  padding: 10px 12px;
+  padding: 9px 10px;
   cursor: pointer;
   font-weight: 600;
+  flex: 0 0 auto;
 }
 .topbar-search button:hover { background: var(--chip-strong); }
 .topbar-nav a, .theme-button, .page-button, .hero-nav a, .chip, .cta-link {
@@ -399,6 +403,7 @@ tbody tr:first-child td { padding-top: 18px; }
   .brand-group, .topbar-nav, .theme-toggle { justify-content: center; }
   .brand-group { flex-wrap: wrap; min-width: 0; }
   .topbar-search { justify-content: center; justify-self: center; width: 100%; }
+  .theme-toggle { flex-wrap: wrap; white-space: normal; }
   .hero { grid-template-columns: 1fr; min-height: auto; gap: 24px; padding-top: 28px; padding-bottom: 20px; }
   .section-head { flex-direction: column; align-items: stretch; }
   .controls, .split-grid { grid-template-columns: 1fr 1fr; }
