@@ -1,0 +1,10 @@
+{
+  "featured": [
+    {"type": "conference", "slug": "neurips"},
+    {"type": "conference", "slug": "icml"},
+    {"type": "conference", "slug": "cvpr"},
+    {"type": "conference", "slug": "acl"},
+    {"type": "journal", "slug": "jmlr"},
+    {"type": "journal", "slug": "tpami"}
+  ]
+}

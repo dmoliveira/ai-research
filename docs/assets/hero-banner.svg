@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" fill="none">
+  <rect width="820" height="520" rx="36" fill="#0b1525"/>
+  <rect x="44" y="54" width="732" height="412" rx="28" fill="#101b2c" stroke="#24354f"/>
+  <circle cx="160" cy="140" r="46" fill="#6ee7ff" fill-opacity="0.2"/>
+  <circle cx="646" cy="118" r="34" fill="#b27cff" fill-opacity="0.18"/>
+  <circle cx="616" cy="352" r="54" fill="#6ee7ff" fill-opacity="0.12"/>
+  <path d="M170 162L314 218L446 160L590 212" stroke="#6ee7ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M170 302L318 266L460 326L620 276" stroke="#b27cff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="170" cy="162" r="10" fill="#6ee7ff"/>
+  <circle cx="314" cy="218" r="10" fill="#6ee7ff"/>
+  <circle cx="446" cy="160" r="10" fill="#6ee7ff"/>
+  <circle cx="590" cy="212" r="10" fill="#6ee7ff"/>
+  <circle cx="170" cy="302" r="10" fill="#b27cff"/>
+  <circle cx="318" cy="266" r="10" fill="#b27cff"/>
+  <circle cx="460" cy="326" r="10" fill="#b27cff"/>
+  <circle cx="620" cy="276" r="10" fill="#b27cff"/>
+  <rect x="108" y="364" width="144" height="48" rx="24" fill="#142236" stroke="#24354f"/>
+  <rect x="286" y="364" width="170" height="48" rx="24" fill="#142236" stroke="#24354f"/>
+  <rect x="490" y="364" width="204" height="48" rx="24" fill="#142236" stroke="#24354f"/>
+  <text x="141" y="394" fill="#edf3ff" font-family="Inter, Arial, sans-serif" font-size="18">Areas</text>
+  <text x="322" y="394" fill="#edf3ff" font-family="Inter, Arial, sans-serif" font-size="18">Conferences</text>
+  <text x="530" y="394" fill="#edf3ff" font-family="Inter, Arial, sans-serif" font-size="18">Journals + CFPs</text>
+</svg>

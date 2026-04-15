@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Journals · Top Research Venues</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="topbar-shell"><div class="topbar">
+      <a class="author-link" href="https://dmoliveira.github.io/my-cv-public/cv/human/" target="_blank" rel="noreferrer">Made by <strong>Diego Marinho</strong></a>
+      <nav class="topbar-nav">
+        <a href="./index.html">Overview</a><a href="./conferences.html">Conferences</a><a href="./journals.html">Journals</a><a href="./areas.html">Areas</a><a href="./cfp.html">Upcoming CFPs</a><a href="./methodology.html">Methodology</a><a href="./support.html">Support</a>
+      </nav>
+      <div class="theme-toggle" role="group" aria-label="Theme selector"><button data-theme-option="auto" class="theme-button">Auto</button><button data-theme-option="light" class="theme-button">Light</button><button data-theme-option="dark" class="theme-button">Dark</button></div>
+    </div></div>
+    <main>
+      <section class="panel">
+        <p class="eyebrow">Journal directory</p>
+        <h1>Top journals</h1>
+        <p class="muted">Compare journals by area, tier, publisher, access model, review speed, and latest issue.</p>
+      </section>
+      <section class="panel">
+        <div class="controls">
+          <input id="journal-search" type="search" placeholder="Search journal, area, subarea, publisher…" />
+          <select id="journal-area"><option value="">All areas</option></select>
+          <select id="journal-oa"><option value="">All OA models</option></select>
+          <select id="journal-tier"><option value="">All tiers</option></select>
+          <select id="journal-sort"><option value="name-asc">Name A–Z</option><option value="tier-asc">Tier</option><option value="latest-desc">Latest publication</option><option value="review-asc">Review speed</option></select>
+        </div>
+        <p id="journal-count" class="muted"></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tier</th><th>Journal</th><th>Area</th><th>Publisher</th><th>OA model</th><th>Frequency</th><th>Review speed</th><th>Latest issue</th><th>Links</th></tr></thead>
+            <tbody id="journal-body"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel">
+        <p class="eyebrow">Latest issues</p>
+        <h2>Recent journal publication editions</h2>
+        <div id="journal-log-grid" class="log-grid"></div>
+      </section>
+    </main>
+    <footer class="footer"><p>Journal publishing directory for strong research outlets and issue tracking.</p></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>

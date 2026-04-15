@@ -1,0 +1,104 @@
+{
+  "areas": [
+    {
+      "slug": "machine-learning",
+      "name": "Machine Learning",
+      "family": "ai-ml",
+      "description": "General ML methods, optimization, representation learning, and scalable models.",
+      "keywords": ["ML", "optimization", "learning theory"],
+      "related_areas": ["deep-learning", "probabilistic-ml", "representation-learning"],
+      "top_conference_slugs": ["neurips", "icml", "iclr", "aistats"],
+      "top_journal_slugs": ["jmlr", "machine-learning", "jair"]
+    },
+    {
+      "slug": "computer-vision",
+      "name": "Computer Vision",
+      "family": "ai-ml",
+      "description": "Image understanding, video, visual recognition, 3D vision, and multimodal perception.",
+      "keywords": ["vision", "image", "video", "3D"],
+      "related_areas": ["multimodal", "robotics", "deep-learning"],
+      "top_conference_slugs": ["cvpr", "iccv", "eccv"],
+      "top_journal_slugs": ["tpami", "ijcv", "pattern-recognition"]
+    },
+    {
+      "slug": "nlp",
+      "name": "Natural Language Processing",
+      "family": "ai-ml",
+      "description": "Language understanding, generation, translation, summarization, and LLM-centered research.",
+      "keywords": ["NLP", "LLM", "translation", "summarization"],
+      "related_areas": ["language-modeling", "multimodal", "information-retrieval"],
+      "top_conference_slugs": ["acl", "emnlp", "naacl"],
+      "top_journal_slugs": ["tacl", "computational-linguistics", "jair"]
+    },
+    {
+      "slug": "robotics",
+      "name": "Robotics",
+      "family": "ai-ml",
+      "description": "Embodied intelligence, control, planning, manipulation, perception, and robot learning.",
+      "keywords": ["robotics", "control", "embodied AI"],
+      "related_areas": ["reinforcement-learning", "computer-vision", "multimodal"],
+      "top_conference_slugs": ["icra", "iros"],
+      "top_journal_slugs": ["ijrr"]
+    },
+    {
+      "slug": "reinforcement-learning",
+      "name": "Reinforcement Learning",
+      "family": "ai-ml",
+      "description": "Sequential decision making, planning, exploration, and policy optimization.",
+      "keywords": ["RL", "control", "decision making"],
+      "related_areas": ["robotics", "machine-learning", "ai-safety"],
+      "top_conference_slugs": ["neurips", "icml", "iclr"],
+      "top_journal_slugs": ["jmlr", "machine-learning", "jair"]
+    },
+    {
+      "slug": "data-mining",
+      "name": "Data Mining",
+      "family": "data-science",
+      "description": "Pattern discovery, graph mining, and large-scale analysis on structured data.",
+      "keywords": ["data mining", "graphs", "pattern mining"],
+      "related_areas": ["analytics", "machine-learning", "recommendation-systems"],
+      "top_conference_slugs": ["kdd"],
+      "top_journal_slugs": ["dmkd", "tkde"]
+    },
+    {
+      "slug": "information-retrieval",
+      "name": "Information Retrieval",
+      "family": "data-science",
+      "description": "Search, ranking, retrieval systems, recommendation, and retrieval-augmented AI.",
+      "keywords": ["IR", "search", "ranking", "retrieval"],
+      "related_areas": ["nlp", "data-mining", "recommendation-systems"],
+      "top_conference_slugs": ["sigir", "www"],
+      "top_journal_slugs": ["tois"]
+    },
+    {
+      "slug": "systems",
+      "name": "Systems",
+      "family": "computer-science",
+      "description": "Operating systems, distributed systems, infrastructure, and high-performance systems.",
+      "keywords": ["systems", "distributed systems", "infrastructure"],
+      "related_areas": ["distributed-systems", "computer-architecture", "networks"],
+      "top_conference_slugs": [],
+      "top_journal_slugs": []
+    },
+    {
+      "slug": "security",
+      "name": "Security & Privacy",
+      "family": "computer-science",
+      "description": "Applied security, privacy, trustworthy systems, and secure computing.",
+      "keywords": ["security", "privacy", "trust"],
+      "related_areas": ["systems", "privacy", "ai-safety"],
+      "top_conference_slugs": [],
+      "top_journal_slugs": []
+    },
+    {
+      "slug": "theory",
+      "name": "Theory & Algorithms",
+      "family": "computer-science",
+      "description": "Algorithms, complexity, optimization, and formal foundations.",
+      "keywords": ["theory", "algorithms", "complexity"],
+      "related_areas": ["machine-learning", "statistics"],
+      "top_conference_slugs": [],
+      "top_journal_slugs": []
+    }
+  ]
+}

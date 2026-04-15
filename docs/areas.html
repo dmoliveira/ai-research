@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Areas · Top Research Venues</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="topbar-shell"><div class="topbar">
+      <a class="author-link" href="https://dmoliveira.github.io/my-cv-public/cv/human/" target="_blank" rel="noreferrer">Made by <strong>Diego Marinho</strong></a>
+      <nav class="topbar-nav">
+        <a href="./index.html">Overview</a><a href="./conferences.html">Conferences</a><a href="./journals.html">Journals</a><a href="./areas.html">Areas</a><a href="./cfp.html">Upcoming CFPs</a><a href="./methodology.html">Methodology</a><a href="./support.html">Support</a>
+      </nav>
+      <div class="theme-toggle" role="group" aria-label="Theme selector"><button data-theme-option="auto" class="theme-button">Auto</button><button data-theme-option="light" class="theme-button">Light</button><button data-theme-option="dark" class="theme-button">Dark</button></div>
+    </div></div>
+    <main>
+      <section class="panel">
+        <p class="eyebrow">Research area explorer</p>
+        <h1>Find the best venues by area</h1>
+        <p class="muted">Browse conferences and journals through an area taxonomy and a simple relationship graph.</p>
+      </section>
+      <section class="panel">
+        <div class="controls">
+          <input id="area-search" type="search" placeholder="Search area, venue, keyword…" />
+          <select id="area-family"><option value="">All families</option></select>
+          <select id="area-venue-type"><option value="all">Conferences + journals</option><option value="conference">Conferences only</option><option value="journal">Journals only</option></select>
+          <button id="area-reset" class="page-button" type="button">Reset graph</button>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Area graph</p>
+            <h2>Area-to-venue graph</h2>
+          </div>
+          <div class="legend-row muted">
+            <span><span class="graph-legend-dot dot-area"></span> Area</span>
+            <span><span class="graph-legend-dot dot-conference"></span> Conference</span>
+            <span><span class="graph-legend-dot dot-journal"></span> Journal</span>
+          </div>
+        </div>
+        <div class="graph-shell"><svg id="area-graph" viewBox="0 0 1000 480" role="img" aria-label="Area to venue graph"></svg></div>
+      </section>
+      <section class="panel split-grid">
+        <div class="graph-side-card stack-md">
+          <div id="area-summary">Select an area node to inspect related venues.</div>
+        </div>
+        <div class="graph-side-card stack-md">
+          <p class="eyebrow">Area notes</p>
+          <div id="area-related-cfps" class="stack-sm muted"></div>
+        </div>
+      </section>
+      <section class="panel split-grid">
+        <div>
+          <p class="eyebrow">Conferences for selected area</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Conference</th><th>Tier</th><th>Deadline</th><th>Fit</th><th>Status</th></tr></thead>
+              <tbody id="area-conference-body"></tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Journals for selected area</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Journal</th><th>Tier</th><th>Latest issue</th><th>Fit</th><th>Review</th></tr></thead>
+              <tbody id="area-journal-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><p>Use the graph for discovery and the tables for practical venue comparison.</p></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>

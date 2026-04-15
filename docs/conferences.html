@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conferences · Top Research Venues</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="topbar-shell"><div class="topbar">
+      <a class="author-link" href="https://dmoliveira.github.io/my-cv-public/cv/human/" target="_blank" rel="noreferrer">Made by <strong>Diego Marinho</strong></a>
+      <nav class="topbar-nav">
+        <a href="./index.html">Overview</a><a href="./conferences.html">Conferences</a><a href="./journals.html">Journals</a><a href="./areas.html">Areas</a><a href="./cfp.html">Upcoming CFPs</a><a href="./methodology.html">Methodology</a><a href="./support.html">Support</a>
+      </nav>
+      <div class="theme-toggle" role="group" aria-label="Theme selector"><button data-theme-option="auto" class="theme-button">Auto</button><button data-theme-option="light" class="theme-button">Light</button><button data-theme-option="dark" class="theme-button">Dark</button></div>
+    </div></div>
+    <main>
+      <section class="panel">
+        <p class="eyebrow">Conference directory</p>
+        <h1>Top conferences</h1>
+        <p class="muted">Search, filter, and sort flagship conferences by area, tier, deadline, and publishing cadence.</p>
+      </section>
+      <section class="panel">
+        <div class="controls">
+          <input id="conference-search" type="search" placeholder="Search conference, area, subarea, publisher…" />
+          <select id="conference-area"><option value="">All areas</option></select>
+          <select id="conference-status"><option value="">All statuses</option></select>
+          <select id="conference-tier"><option value="">All tiers</option></select>
+          <select id="conference-sort"><option value="deadline-asc">Nearest deadline</option><option value="name-asc">Name A–Z</option><option value="tier-asc">Tier</option><option value="acceptance-desc">Acceptance rate</option></select>
+        </div>
+        <p id="conference-count" class="muted"></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tier</th><th>Conference</th><th>Area</th><th>Deadline</th><th>Event</th><th>Frequency</th><th>Acceptance</th><th>Status</th><th>Links</th></tr></thead>
+            <tbody id="conference-body"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel">
+        <p class="eyebrow">Edition logs</p>
+        <h2>Latest conference editions</h2>
+        <div id="conference-log-grid" class="log-grid"></div>
+      </section>
+    </main>
+    <footer class="footer"><p>Conference publishing directory for strong research venues and deadlines.</p></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>

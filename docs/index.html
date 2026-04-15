@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Research Venues for CS / AI / Data Science</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="topbar-shell">
+      <div class="topbar">
+        <a class="author-link" href="https://dmoliveira.github.io/my-cv-public/cv/human/" target="_blank" rel="noreferrer">Made by <strong>Diego Marinho</strong></a>
+        <nav class="topbar-nav">
+          <a href="./index.html">Overview</a>
+          <a href="./conferences.html">Conferences</a>
+          <a href="./journals.html">Journals</a>
+          <a href="./areas.html">Areas</a>
+          <a href="./cfp.html">Upcoming CFPs</a>
+          <a href="./methodology.html">Methodology</a>
+          <a href="./support.html">Support</a>
+        </nav>
+        <div class="theme-toggle" role="group" aria-label="Theme selector">
+          <button data-theme-option="auto" class="theme-button">Auto</button>
+          <button data-theme-option="light" class="theme-button">Light</button>
+          <button data-theme-option="dark" class="theme-button">Dark</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Updated 2026 · GitHub Pages ready</p>
+        <h1>Top research conferences and journals for Computer Science, AI/ML, and Data Science</h1>
+        <p>
+          Search top venues, compare journals and conferences, track calls for papers, explore venue-to-area relationships,
+          and browse standardized conference edition logs and journal issue logs.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Top venues</span>
+          <span class="badge">Upcoming deadlines</span>
+          <span class="badge">Area explorer</span>
+          <span class="badge">Conference logs</span>
+          <span class="badge">Journal issues</span>
+        </div>
+        <div class="hero-note panel-inline">
+          <strong>Purpose:</strong> a curated research publishing directory to help people discover where to submit, what to read,
+          and how venues connect across areas. This is a navigation layer, <strong>not an official ranking body</strong>.
+        </div>
+        <div class="hero-nav" style="margin-top: 16px;">
+          <a href="./conferences.html">Browse conferences</a>
+          <a href="./journals.html">Browse journals</a>
+          <a href="./areas.html">Explore by area</a>
+        </div>
+      </div>
+      <img src="./assets/hero-banner.svg" alt="Abstract graph linking research areas, conferences, and journals" class="hero-art" />
+    </header>
+
+    <main>
+      <section class="panel">
+        <div id="meta-summary">Loading dataset…</div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Featured venues</p>
+            <h2>Fast shortlist of high-signal venues</h2>
+          </div>
+          <a class="cta-link" href="./areas.html">Open area explorer</a>
+        </div>
+        <div id="featured-grid" class="card-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Nearest deadlines</p>
+            <h2>Upcoming calls for papers</h2>
+          </div>
+          <a class="cta-link" href="./cfp.html">See all CFPs</a>
+        </div>
+        <div id="deadline-grid" class="deadline-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Conference overview</p>
+            <h2>Top conference preview</h2>
+          </div>
+          <a class="cta-link" href="./conferences.html">Open full table</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Tier</th><th>Conference</th><th>Area</th><th>Deadline</th><th>Event</th><th>Acceptance</th><th>Status</th></tr>
+            </thead>
+            <tbody id="home-conference-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Journal overview</p>
+            <h2>Top journal preview</h2>
+          </div>
+          <a class="cta-link" href="./journals.html">Open full table</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Tier</th><th>Journal</th><th>Area</th><th>Publisher</th><th>OA</th><th>Latest issue</th><th>Review speed</th></tr>
+            </thead>
+            <tbody id="home-journal-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel split-grid">
+        <div>
+          <p class="eyebrow">Conference editions</p>
+          <h2>Recent edition logs</h2>
+          <div id="edition-log-grid" class="log-grid"></div>
+        </div>
+        <div>
+          <p class="eyebrow">Journal issues</p>
+          <h2>Latest publication editions</h2>
+          <div id="issue-log-grid" class="log-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Minimalist research venue directory for publishing discovery across CS, AI/ML, and Data Science.</p>
+      <p>
+        Made by <a href="https://dmoliveira.github.io/my-cv-public/cv/human/" target="_blank" rel="noreferrer">Diego Marinho</a>
+        · <a href="./methodology.html">Methodology</a>
+        · <a href="./support.html">Support</a>
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

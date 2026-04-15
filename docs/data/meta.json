@@ -1,0 +1,17 @@
+{
+  "title": "Top Research Conferences and Journals for CS, AI/ML, and Data Science",
+  "updated_at": "2026-04-15",
+  "updated_year": "2026",
+  "source_note": "Curated publishing navigation directory for top conferences, journals, and upcoming calls for papers in CS, AI/ML, and Data Science.",
+  "methodology": [
+    "Top venues selected from recognized flagship conferences and journals plus strong adjacent venues.",
+    "Deadlines may be marked confirmed, estimated, or TBA.",
+    "This is a curated research navigation directory, not an official ranking publication."
+  ],
+  "coverage": {
+    "conferences": 10,
+    "journals": 10,
+    "cfps": 14,
+    "areas": 10
+  }
+}

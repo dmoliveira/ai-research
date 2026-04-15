@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upcoming CFPs · Top Research Venues</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="topbar-shell"><div class="topbar">
+      <a class="author-link" href="https://dmoliveira.github.io/my-cv-public/cv/human/" target="_blank" rel="noreferrer">Made by <strong>Diego Marinho</strong></a>
+      <nav class="topbar-nav">
+        <a href="./index.html">Overview</a><a href="./conferences.html">Conferences</a><a href="./journals.html">Journals</a><a href="./areas.html">Areas</a><a href="./cfp.html">Upcoming CFPs</a><a href="./methodology.html">Methodology</a><a href="./support.html">Support</a>
+      </nav>
+      <div class="theme-toggle" role="group" aria-label="Theme selector"><button data-theme-option="auto" class="theme-button">Auto</button><button data-theme-option="light" class="theme-button">Light</button><button data-theme-option="dark" class="theme-button">Dark</button></div>
+    </div></div>
+    <main>
+      <section class="panel">
+        <p class="eyebrow">Calls for papers</p>
+        <h1>Upcoming publishing deadlines</h1>
+        <p class="muted">Track nearest deadlines, confidence level, and area-specific submission opportunities.</p>
+      </section>
+      <section class="panel">
+        <div id="cfp-summary" class="deadline-grid"></div>
+      </section>
+      <section class="panel">
+        <div class="controls">
+          <input id="cfp-search" type="search" placeholder="Search venue, track, area…" />
+          <select id="cfp-area"><option value="">All areas</option></select>
+          <select id="cfp-type"><option value="">All venue types</option></select>
+          <select id="cfp-status"><option value="">All statuses</option></select>
+          <select id="cfp-confidence"><option value="">All confidence levels</option></select>
+        </div>
+        <p id="cfp-count" class="muted"></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Venue</th><th>Type</th><th>Track</th><th>Deadline</th><th>Notification</th><th>Status</th><th>Confidence</th><th>Submission</th></tr></thead>
+            <tbody id="cfp-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><p>Use official venue pages to confirm last-minute deadline adjustments.</p></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
