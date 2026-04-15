@@ -17,6 +17,15 @@ const NAV_ICONS = {
   "methodology.html": "🧪",
   "support.html": "💖"
 };
+const PAGE_SEARCH_TARGETS = {
+  "index.html": "conferences.html",
+  "conferences.html": "conferences.html",
+  "journals.html": "journals.html",
+  "cfp.html": "cfp.html",
+  "areas.html": "areas.html",
+  "methodology.html": "conferences.html",
+  "support.html": "conferences.html"
+};
 
 function syncTopbarOffset() {
   const topbar = document.querySelector(".topbar-shell");
@@ -69,6 +78,80 @@ function initCurrentNav() {
       linkEl.setAttribute("aria-current", "page");
     }
   });
+}
+
+function currentPageName() {
+  return window.location.pathname.split("/").pop() || "index.html";
+}
+
+function queryParams() {
+  return new URLSearchParams(window.location.search);
+}
+
+function initTopbarQuickSearch() {
+  const topbar = document.querySelector(".topbar");
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (!topbar || !themeToggle || document.querySelector(".topbar-search")) return;
+  const current = currentPageName();
+  const params = queryParams();
+  const wrapper = document.createElement("form");
+  wrapper.className = "topbar-search";
+  wrapper.innerHTML = `
+    <select aria-label="Quick search target">
+      <option value="conferences.html">Conferences</option>
+      <option value="journals.html">Journals</option>
+      <option value="cfp.html">CFPs</option>
+      <option value="areas.html">Areas</option>
+    </select>
+    <input type="search" placeholder="Quick search venues…" aria-label="Quick search input" />
+    <button type="submit">Search</button>
+  `;
+  const select = wrapper.querySelector("select");
+  const input = wrapper.querySelector("input");
+  select.value = PAGE_SEARCH_TARGETS[current] || "conferences.html";
+  input.value = params.get("q") || "";
+  wrapper.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const q = input.value.trim();
+    const target = select.value;
+    const url = new URL(target, window.location.href);
+    if (q) url.searchParams.set("q", q);
+    window.location.href = url.pathname.split("/").pop() + url.search;
+  });
+  topbar.insertBefore(wrapper, themeToggle);
+}
+
+function getPrefillQuery() {
+  return queryParams().get("q") || "";
+}
+
+function renderPagination(container, page, totalItems, pageSize, onPageChange, onSizeChange) {
+  if (!container) return;
+  const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+  const safePage = Math.min(page, totalPages);
+  const start = totalItems === 0 ? 0 : ((safePage - 1) * pageSize) + 1;
+  const end = Math.min(totalItems, safePage * pageSize);
+  container.innerHTML = `
+    <div class="pagination-meta">Showing ${start}-${end} of ${totalItems}</div>
+    <div class="pagination-actions">
+      <div class="pagination-size">
+        <label>Rows</label>
+        <select>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+      <button class="page-button" data-page="prev" ${safePage <= 1 ? "disabled" : ""}>Previous</button>
+      <span class="pagination-meta">Page ${safePage} / ${totalPages}</span>
+      <button class="page-button" data-page="next" ${safePage >= totalPages ? "disabled" : ""}>Next</button>
+    </div>
+  `;
+  const sizeSelect = container.querySelector("select");
+  sizeSelect.value = String(pageSize);
+  sizeSelect.addEventListener("change", () => onSizeChange(Number(sizeSelect.value)));
+  container.querySelector('[data-page="prev"]')?.addEventListener("click", () => onPageChange(safePage - 1));
+  container.querySelector('[data-page="next"]')?.addEventListener("click", () => onPageChange(safePage + 1));
 }
 
 function escapeHtml(value) {
@@ -261,7 +344,9 @@ function renderHomeDeadlines(cfps, venues) {
 
 function renderHomeConferencePreview(conferences) {
   const body = document.getElementById("home-conference-body");
+  const total = document.getElementById("overview-conference-total");
   if (!body) return;
+  if (total) total.textContent = `${conferences.length} total`;
   const previewRows = [...conferences]
     .sort((a, b) => compareTier(a.tier, b.tier) || new Date(a.next_deadline || "9999-12-31") - new Date(b.next_deadline || "9999-12-31"))
     .slice(0, 6);
@@ -280,7 +365,9 @@ function renderHomeConferencePreview(conferences) {
 
 function renderHomeJournalPreview(journals) {
   const body = document.getElementById("home-journal-body");
+  const total = document.getElementById("overview-journal-total");
   if (!body) return;
+  if (total) total.textContent = `${journals.length} total`;
   const previewRows = [...journals]
     .sort((a, b) => compareTier(a.tier, b.tier) || new Date(b.latest_publication_date || 0) - new Date(a.latest_publication_date || 0))
     .slice(0, 6);
@@ -330,8 +417,16 @@ function initConferencePage(conferences) {
   const tier = document.getElementById("conference-tier");
   const sort = document.getElementById("conference-sort");
   const count = document.getElementById("conference-count");
+  const total = document.getElementById("conference-total");
   const logGrid = document.getElementById("conference-log-grid");
   const trendGrid = document.getElementById("conference-trend-grid");
+  const pagerTop = document.getElementById("conference-pagination-top");
+  const pagerBottom = document.getElementById("conference-pagination-bottom");
+  let page = 1;
+  let pageSize = 5;
+  const prefill = getPrefillQuery();
+  if (prefill) search.value = prefill;
+  if (total) total.textContent = `${conferences.length} conferences tracked`;
   area.innerHTML += [...new Set(conferences.map((item) => item.area))].sort().map((value) => `<option value="${value}">${value}</option>`).join("");
   status.innerHTML += [...new Set(conferences.map((item) => item.status))].map((value) => `<option value="${value}">${value}</option>`).join("");
   tier.innerHTML += [...new Set(conferences.map((item) => item.tier))].sort(compareTier).map((value) => `<option value="${value}">${value}</option>`).join("");
@@ -350,8 +445,11 @@ function initConferencePage(conferences) {
 
   function draw() {
     const rows = currentData();
+    const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+    page = Math.min(page, totalPages);
+    const pagedRows = rows.slice((page - 1) * pageSize, page * pageSize);
     count.textContent = `${rows.length} conferences shown`;
-    body.innerHTML = rows.map((item) => `
+    body.innerHTML = pagedRows.map((item) => `
       <tr>
         <td data-label="Tier">${escapeHtml(item.tier)}</td>
         <td data-label="Conference">${link(item.short_name, item.website)}<div class="muted">${escapeHtml(item.name)}</div></td>
@@ -369,10 +467,12 @@ function initConferencePage(conferences) {
       return log ? `<article class="log-card stack-sm"><h3>${escapeHtml(item.short_name)} ${log.year}</h3><p class="muted">${formatLocation(log.location, log.location_country)}</p><p>${escapeHtml(log.acceptance_rate)} acceptance · ${log.papers_published ? `${log.papers_published} papers` : "paper count TBA"}</p><div>${tagList(log.highlights || [])}</div><div class="actions">${miniLink("Proceedings", log.proceedings_url, "📄")}</div></article>` : "";
     }).join("");
     if (trendGrid) trendGrid.innerHTML = rows.slice(0, 6).map(renderTrendCard).join("");
+    renderPagination(pagerTop, page, rows.length, pageSize, (next) => { page = next; draw(); }, (size) => { pageSize = size; page = 1; draw(); });
+    renderPagination(pagerBottom, page, rows.length, pageSize, (next) => { page = next; draw(); }, (size) => { pageSize = size; page = 1; draw(); });
   }
 
-  [search, area, status, tier, sort].forEach((element) => element.addEventListener("input", draw));
-  [area, status, tier, sort].forEach((element) => element.addEventListener("change", draw));
+  [search, area, status, tier, sort].forEach((element) => element.addEventListener("input", () => { page = 1; draw(); }));
+  [area, status, tier, sort].forEach((element) => element.addEventListener("change", () => { page = 1; draw(); }));
   draw();
 }
 
@@ -385,7 +485,15 @@ function initJournalPage(journals) {
   const tier = document.getElementById("journal-tier");
   const sort = document.getElementById("journal-sort");
   const count = document.getElementById("journal-count");
+  const total = document.getElementById("journal-total");
   const logGrid = document.getElementById("journal-log-grid");
+  const pagerTop = document.getElementById("journal-pagination-top");
+  const pagerBottom = document.getElementById("journal-pagination-bottom");
+  let page = 1;
+  let pageSize = 5;
+  const prefill = getPrefillQuery();
+  if (prefill) search.value = prefill;
+  if (total) total.textContent = `${journals.length} journals tracked`;
   area.innerHTML += [...new Set(journals.map((item) => item.area))].sort().map((value) => `<option value="${value}">${value}</option>`).join("");
   oa.innerHTML += [...new Set(journals.map((item) => item.oa_model))].map((value) => `<option value="${value}">${value}</option>`).join("");
   tier.innerHTML += [...new Set(journals.map((item) => item.tier))].sort(compareTier).map((value) => `<option value="${value}">${value}</option>`).join("");
@@ -405,8 +513,11 @@ function initJournalPage(journals) {
 
   function draw() {
     const rows = currentData();
+    const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+    page = Math.min(page, totalPages);
+    const pagedRows = rows.slice((page - 1) * pageSize, page * pageSize);
     count.textContent = `${rows.length} journals shown`;
-    body.innerHTML = rows.map((item) => `
+    body.innerHTML = pagedRows.map((item) => `
       <tr>
         <td data-label="Tier">${escapeHtml(item.tier)}</td>
         <td data-label="Journal">${link(item.short_name, item.website)}<div class="muted">${escapeHtml(item.name)}</div></td>
@@ -423,10 +534,12 @@ function initJournalPage(journals) {
       const log = item.issue_log?.[0];
       return log ? `<article class="log-card stack-sm"><h3>${escapeHtml(item.short_name)}</h3><p class="muted">Vol. ${escapeHtml(log.volume)}${log.issue ? `, Issue ${escapeHtml(log.issue)}` : ""}</p><p>${formatDate(log.date)}</p><p class="muted">${escapeHtml(log.featured_articles?.[0]?.title || "")}</p><div class="actions">${miniLink("Issue", log.issue_url, "📰")}${miniLink("Article", log.featured_articles?.[0]?.url, "📄")}</div></article>` : "";
     }).join("");
+    renderPagination(pagerTop, page, rows.length, pageSize, (next) => { page = next; draw(); }, (size) => { pageSize = size; page = 1; draw(); });
+    renderPagination(pagerBottom, page, rows.length, pageSize, (next) => { page = next; draw(); }, (size) => { pageSize = size; page = 1; draw(); });
   }
 
-  [search, area, oa, tier, sort].forEach((element) => element.addEventListener("input", draw));
-  [area, oa, tier, sort].forEach((element) => element.addEventListener("change", draw));
+  [search, area, oa, tier, sort].forEach((element) => element.addEventListener("input", () => { page = 1; draw(); }));
+  [area, oa, tier, sort].forEach((element) => element.addEventListener("change", () => { page = 1; draw(); }));
   draw();
 }
 
@@ -441,6 +554,12 @@ function initCfpPage(cfps, conferences, journals, areas) {
   const confidence = document.getElementById("cfp-confidence");
   const count = document.getElementById("cfp-count");
   const summary = document.getElementById("cfp-summary");
+  const pagerTop = document.getElementById("cfp-pagination-top");
+  const pagerBottom = document.getElementById("cfp-pagination-bottom");
+  let page = 1;
+  let pageSize = 5;
+  const prefill = getPrefillQuery();
+  if (prefill) search.value = prefill;
   area.innerHTML += areas.map((item) => `<option value="${item.slug}">${item.name}</option>`).join("");
   type.innerHTML += [...new Set(cfps.map((item) => item.venue_type))].map((value) => `<option value="${value}">${value}</option>`).join("");
   status.innerHTML += [...new Set(cfps.map((item) => item.status))].map((value) => `<option value="${value}">${value}</option>`).join("");
@@ -470,8 +589,11 @@ function initCfpPage(cfps, conferences, journals, areas) {
 
   function draw() {
     const rows = currentData();
+    const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+    page = Math.min(page, totalPages);
+    const pagedRows = rows.slice((page - 1) * pageSize, page * pageSize);
     count.textContent = `${rows.length} CFPs shown`;
-    body.innerHTML = rows.map((item) => {
+    body.innerHTML = pagedRows.map((item) => {
       const venue = venues.get(item.venue_slug);
       return `<tr>
         <td data-label="Venue">${escapeHtml(venue?.short_name || item.venue_slug)}<div class="muted">${escapeHtml(venue?.area || "")} · ${formatLocation(venue?.location, venue?.location_country)}</div></td>
@@ -484,10 +606,12 @@ function initCfpPage(cfps, conferences, journals, areas) {
         <td data-label="Submission">${link("Submit", item.submission_url)}</td>
       </tr>`;
     }).join("");
+    renderPagination(pagerTop, page, rows.length, pageSize, (next) => { page = next; draw(); }, (size) => { pageSize = size; page = 1; draw(); });
+    renderPagination(pagerBottom, page, rows.length, pageSize, (next) => { page = next; draw(); }, (size) => { pageSize = size; page = 1; draw(); });
   }
 
-  [search, area, type, status, confidence].forEach((element) => element.addEventListener("input", draw));
-  [area, type, status, confidence].forEach((element) => element.addEventListener("change", draw));
+  [search, area, type, status, confidence].forEach((element) => element.addEventListener("input", () => { page = 1; draw(); }));
+  [area, type, status, confidence].forEach((element) => element.addEventListener("change", () => { page = 1; draw(); }));
   draw();
 }
 
@@ -597,6 +721,7 @@ function initAreasPage(areas, conferences, journals, cfps) {
 async function main() {
   initTheme();
   initCurrentNav();
+  initTopbarQuickSearch();
   syncTopbarOffset();
   const [meta, conferenceData, journalData, cfpData, featuredData, areaData] = await Promise.all([
     loadJson("./data/meta.json"),

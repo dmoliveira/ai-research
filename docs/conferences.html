@@ -21,6 +21,7 @@
       <section class="panel">
         <p class="eyebrow">🏛 Conference directory</p>
         <h1>Top conferences</h1>
+        <p id="conference-total" class="badge"></p>
         <p class="muted">Search, filter, and sort flagship conferences by area, tier, deadline, and publishing cadence.</p>
       </section>
       <section class="panel">
@@ -32,12 +33,14 @@
           <select id="conference-sort"><option value="deadline-asc">Nearest deadline</option><option value="name-asc">Name A–Z</option><option value="tier-asc">Tier</option><option value="acceptance-desc">Acceptance rate</option></select>
         </div>
         <p id="conference-count" class="muted"></p>
+        <div id="conference-pagination-top" class="pagination-bar"></div>
         <div class="table-wrap table-sticky">
           <table>
             <thead><tr><th>Tier</th><th>Conference</th><th>Area</th><th>Deadline</th><th>Event</th><th>Frequency</th><th>Acceptance</th><th>Status</th><th>Links</th></tr></thead>
             <tbody id="conference-body"></tbody>
           </table>
         </div>
+        <div id="conference-pagination-bottom" class="pagination-bar"></div>
       </section>
       <section class="panel">
         <p class="eyebrow">🗂 Edition logs</p>

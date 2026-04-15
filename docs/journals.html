@@ -21,6 +21,7 @@
       <section class="panel">
         <p class="eyebrow">📚 Journal directory</p>
         <h1>Top journals</h1>
+        <p id="journal-total" class="badge"></p>
         <p class="muted">Compare journals by area, tier, publisher, access model, review speed, and latest issue.</p>
       </section>
       <section class="panel">
@@ -32,12 +33,14 @@
           <select id="journal-sort"><option value="name-asc">Name A–Z</option><option value="tier-asc">Tier</option><option value="latest-desc">Latest publication</option><option value="review-asc">Review speed</option></select>
         </div>
         <p id="journal-count" class="muted"></p>
+        <div id="journal-pagination-top" class="pagination-bar"></div>
         <div class="table-wrap table-sticky">
           <table>
             <thead><tr><th>Tier</th><th>Journal</th><th>Area</th><th>Publisher</th><th>OA model</th><th>Frequency</th><th>Review speed</th><th>Latest issue</th><th>Links</th></tr></thead>
             <tbody id="journal-body"></tbody>
           </table>
         </div>
+        <div id="journal-pagination-bottom" class="pagination-bar"></div>
       </section>
       <section class="panel">
         <p class="eyebrow">📰 Latest issues</p>
