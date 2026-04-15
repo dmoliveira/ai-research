@@ -83,6 +83,10 @@ main, .hero, .footer, .narrow { max-width: 1240px; margin: 0 auto; padding: 24px
   white-space: nowrap;
   font-weight: 500;
 }
+.brand-byline {
+  font-weight: 500;
+  color: var(--muted);
+}
 .brand-group {
   grid-area: brand;
   display: flex;

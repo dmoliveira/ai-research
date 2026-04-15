@@ -1,10 +1,10 @@
-# Top Research Conferences and Journals for CS, AI/ML, and Data Science
+# VenueAtlas — Top Research Conferences and Journals for CS, AI/ML, and Data Science
 
 [![Updated 2026](https://img.shields.io/badge/updated-2026-blue)](./docs/data/meta.json)
 [![GitHub Pages Ready](https://img.shields.io/badge/GitHub%20Pages-ready-black)](./docs/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
-Research-friendly directory of top conferences, journals, upcoming calls for papers, and area-based publishing routes for Computer Science, AI/ML, and Data Science.
+VenueAtlas is a research-friendly directory of top conferences, journals, upcoming calls for papers, and area-based publishing routes for Computer Science, AI/ML, and Data Science.
 
 Created by **[Diego Marinho](https://dmoliveira.github.io/my-cv-public/cv/human/)**.
 
