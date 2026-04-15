@@ -1,0 +1,1454 @@
+{
+  "conferences": [
+    {
+      "short_name": "AAAI",
+      "name": "AAAI Conference on Artificial Intelligence",
+      "slug": "aaai",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "artificial intelligence",
+        "machine learning"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "AAAI",
+      "website": "https://aaai.org/conference/aaai/"
+    },
+    {
+      "short_name": "IJCAI",
+      "name": "International Joint Conference on Artificial Intelligence",
+      "slug": "ijcai",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "artificial intelligence"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "IJCAI",
+      "website": "https://www.ijcai.org/"
+    },
+    {
+      "short_name": "AISTATS",
+      "name": "International Conference on Artificial Intelligence and Statistics",
+      "slug": "aistats",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "statistics",
+        "machine learning"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "PMLR",
+      "website": "https://aistats.org/"
+    },
+    {
+      "short_name": "UAI",
+      "name": "Conference on Uncertainty in Artificial Intelligence",
+      "slug": "uai",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "probabilistic AI",
+        "uncertainty"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "AUAI",
+      "website": "https://www.auai.org/uai"
+    },
+    {
+      "short_name": "COLM",
+      "name": "Conference on Language Modeling",
+      "slug": "colm",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "language modeling",
+        "foundation models"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "COLM",
+      "website": "https://colmweb.org/"
+    },
+    {
+      "short_name": "ICASSP",
+      "name": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "slug": "icassp",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "speech",
+        "signal processing"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "IEEE",
+      "website": "https://2026.ieeeicassp.org/"
+    },
+    {
+      "short_name": "INTERSPEECH",
+      "name": "Conference of the International Speech Communication Association",
+      "slug": "interspeech",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "nlp",
+      "subareas": [
+        "speech",
+        "spoken language"
+      ],
+      "subarea_slugs": [
+        "nlp"
+      ],
+      "publisher": "ISCA",
+      "website": "https://www.interspeech2026.org/"
+    },
+    {
+      "short_name": "MICCAI",
+      "name": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "slug": "miccai",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "medical imaging",
+        "computer vision"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "MICCAI Society",
+      "website": "https://conferences.miccai.org/"
+    },
+    {
+      "short_name": "ICIP",
+      "name": "IEEE International Conference on Image Processing",
+      "slug": "icip",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "image processing",
+        "computer vision"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "IEEE",
+      "website": "https://2026.ieeeicip.org/"
+    },
+    {
+      "short_name": "ICPR",
+      "name": "International Conference on Pattern Recognition",
+      "slug": "icpr",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "pattern recognition",
+        "vision"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "IAPR",
+      "website": "https://www.icpr2026.org/"
+    },
+    {
+      "short_name": "WACV",
+      "name": "IEEE Winter Conference on Applications of Computer Vision",
+      "slug": "wacv",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "computer vision"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "IEEE / CVF",
+      "website": "https://wacv.thecvf.com/"
+    },
+    {
+      "short_name": "BMVC",
+      "name": "British Machine Vision Conference",
+      "slug": "bmvc",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "computer vision"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "BMVA",
+      "website": "https://bmvc2026.org/"
+    },
+    {
+      "short_name": "ICRA",
+      "name": "IEEE International Conference on Robotics and Automation",
+      "slug": "icra",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robotics",
+        "control"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "IEEE",
+      "website": "https://2026.ieee-icra.org/"
+    },
+    {
+      "short_name": "IROS",
+      "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "slug": "iros",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robotics"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "IEEE / RSJ",
+      "website": "https://www.iros.org/"
+    },
+    {
+      "short_name": "RSS",
+      "name": "Robotics: Science and Systems",
+      "slug": "rss",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robotics",
+        "robot learning"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "RSS Foundation",
+      "website": "https://roboticsconference.org/"
+    },
+    {
+      "short_name": "CoRL",
+      "name": "Conference on Robot Learning",
+      "slug": "corl",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robot learning",
+        "embodied AI"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "CoRL",
+      "website": "https://www.corl.org/"
+    },
+    {
+      "short_name": "AAMAS",
+      "name": "International Conference on Autonomous Agents and Multiagent Systems",
+      "slug": "aamas",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "multi-agent systems"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "IFAAMAS",
+      "website": "https://aamas2026-conference.auckland.ac.nz/"
+    },
+    {
+      "short_name": "ICAPS",
+      "name": "International Conference on Automated Planning and Scheduling",
+      "slug": "icaps",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "planning",
+        "decision making"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "AAAI",
+      "website": "https://icaps-conference.org/"
+    },
+    {
+      "short_name": "FAccT",
+      "name": "ACM Conference on Fairness, Accountability, and Transparency",
+      "slug": "facct",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "AI ethics",
+        "fairness"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "ACM",
+      "website": "https://facctconference.org/"
+    },
+    {
+      "short_name": "WWW",
+      "name": "The Web Conference",
+      "slug": "www",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "web",
+        "search",
+        "data mining"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "IW3C2",
+      "website": "https://www2026.thewebconf.org/"
+    },
+    {
+      "short_name": "WSDM",
+      "name": "ACM International Conference on Web Search and Data Mining",
+      "slug": "wsdm",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "web search",
+        "data mining"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "ACM",
+      "website": "https://www.wsdm-conference.org/2026/"
+    },
+    {
+      "short_name": "CIKM",
+      "name": "ACM International Conference on Information and Knowledge Management",
+      "slug": "cikm",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "IR",
+        "knowledge management"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "ACM",
+      "website": "https://www.cikm2026.org/"
+    },
+    {
+      "short_name": "ICDM",
+      "name": "IEEE International Conference on Data Mining",
+      "slug": "icdm",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "data-mining",
+      "subareas": [
+        "data mining"
+      ],
+      "subarea_slugs": [
+        "data-mining"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.cloud-conf.net/icdm2026/"
+    },
+    {
+      "short_name": "SDM",
+      "name": "SIAM International Conference on Data Mining",
+      "slug": "sdm",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "data-mining",
+      "subareas": [
+        "data mining"
+      ],
+      "subarea_slugs": [
+        "data-mining"
+      ],
+      "publisher": "SIAM",
+      "website": "https://www.siam.org/conferences/cm/conference/sdm26"
+    },
+    {
+      "short_name": "RecSys",
+      "name": "ACM Conference on Recommender Systems",
+      "slug": "recsys",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "recommender systems"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "ACM",
+      "website": "https://recsys.acm.org/recsys26/"
+    },
+    {
+      "short_name": "ECIR",
+      "name": "European Conference on Information Retrieval",
+      "slug": "ecir",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "information retrieval"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "BCS IRSG",
+      "website": "https://ecir2026.eu/"
+    },
+    {
+      "short_name": "ECML-PKDD",
+      "name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+      "slug": "ecml-pkdd",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "data-mining",
+      "subareas": [
+        "machine learning",
+        "data mining"
+      ],
+      "subarea_slugs": [
+        "data-mining"
+      ],
+      "publisher": "ECML PKDD",
+      "website": "https://ecmlpkdd.org/2026/"
+    },
+    {
+      "short_name": "PAKDD",
+      "name": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+      "slug": "pakdd",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "data-mining",
+      "subareas": [
+        "data mining"
+      ],
+      "subarea_slugs": [
+        "data-mining"
+      ],
+      "publisher": "PAKDD",
+      "website": "https://pakdd2026.org/"
+    },
+    {
+      "short_name": "EACL",
+      "name": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "slug": "eacl",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "nlp",
+      "subareas": [
+        "natural language processing"
+      ],
+      "subarea_slugs": [
+        "nlp"
+      ],
+      "publisher": "ACL",
+      "website": "https://eacl.org/"
+    },
+    {
+      "short_name": "CoNLL",
+      "name": "Conference on Computational Natural Language Learning",
+      "slug": "conll",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "nlp",
+      "subareas": [
+        "computational linguistics"
+      ],
+      "subarea_slugs": [
+        "nlp"
+      ],
+      "publisher": "SIGNLL",
+      "website": "https://www.conll.org/"
+    },
+    {
+      "short_name": "SIGDIAL",
+      "name": "Meeting on Discourse and Dialogue",
+      "slug": "sigdial",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "nlp",
+      "subareas": [
+        "dialogue systems"
+      ],
+      "subarea_slugs": [
+        "nlp"
+      ],
+      "publisher": "SIGdial",
+      "website": "https://www.sigdial.org/"
+    },
+    {
+      "short_name": "SIGMOD",
+      "name": "ACM SIGMOD International Conference on Management of Data",
+      "slug": "sigmod",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "databases",
+        "data management"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://2026.sigmod.org/"
+    },
+    {
+      "short_name": "VLDB",
+      "name": "International Conference on Very Large Data Bases",
+      "slug": "vldb",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "databases"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "VLDB Endowment",
+      "website": "https://vldb.org/2026/"
+    },
+    {
+      "short_name": "ICDE",
+      "name": "IEEE International Conference on Data Engineering",
+      "slug": "icde",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "data engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://icde2026.github.io/"
+    },
+    {
+      "short_name": "PODS",
+      "name": "Symposium on Principles of Database Systems",
+      "slug": "pods",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "database theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://sigmod.org/pods-opensite/"
+    },
+    {
+      "short_name": "ICDT",
+      "name": "International Conference on Database Theory",
+      "slug": "icdt",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "database theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ICDT",
+      "website": "https://databasetheory.org/icdt-pages/"
+    },
+    {
+      "short_name": "SOSP",
+      "name": "Symposium on Operating Systems Principles",
+      "slug": "sosp",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "operating systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM SIGOPS",
+      "website": "https://sigops.org/s/conferences/sosp/"
+    },
+    {
+      "short_name": "OSDI",
+      "name": "USENIX Symposium on Operating Systems Design and Implementation",
+      "slug": "osdi",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "operating systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "USENIX",
+      "website": "https://www.usenix.org/conference/osdi26"
+    },
+    {
+      "short_name": "NSDI",
+      "name": "USENIX Symposium on Networked Systems Design and Implementation",
+      "slug": "nsdi",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "systems",
+        "networks"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "USENIX",
+      "website": "https://www.usenix.org/conference/nsdi26"
+    },
+    {
+      "short_name": "ATC",
+      "name": "USENIX Annual Technical Conference",
+      "slug": "atc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "USENIX",
+      "website": "https://www.usenix.org/conference/atc26"
+    },
+    {
+      "short_name": "EuroSys",
+      "name": "European Conference on Computer Systems",
+      "slug": "eurosys",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "computer systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "EuroSys",
+      "website": "https://2026.eurosys.org/"
+    },
+    {
+      "short_name": "ASPLOS",
+      "name": "Architectural Support for Programming Languages and Operating Systems",
+      "slug": "asplos",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "architecture",
+        "systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM / IEEE",
+      "website": "https://www.asplos-conference.org/"
+    },
+    {
+      "short_name": "ISCA",
+      "name": "International Symposium on Computer Architecture",
+      "slug": "isca",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "computer architecture"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM / IEEE",
+      "website": "https://iscaconf.org/"
+    },
+    {
+      "short_name": "MICRO",
+      "name": "IEEE/ACM International Symposium on Microarchitecture",
+      "slug": "micro",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "microarchitecture"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM / IEEE",
+      "website": "https://www.microarch.org/micro59/"
+    },
+    {
+      "short_name": "HPCA",
+      "name": "IEEE International Symposium on High-Performance Computer Architecture",
+      "slug": "hpca",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "computer architecture"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://hpca-conf.org/2026/"
+    },
+    {
+      "short_name": "FAST",
+      "name": "USENIX Conference on File and Storage Technologies",
+      "slug": "fast",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "storage systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "USENIX",
+      "website": "https://www.usenix.org/conference/fast26"
+    },
+    {
+      "short_name": "Middleware",
+      "name": "International Middleware Conference",
+      "slug": "middleware",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "middleware"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM IFIP USENIX",
+      "website": "https://middleware-conf.github.io/"
+    },
+    {
+      "short_name": "SoCC",
+      "name": "ACM Symposium on Cloud Computing",
+      "slug": "socc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "cloud computing"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://acmsocc.org/2026/"
+    },
+    {
+      "short_name": "SIGCOMM",
+      "name": "ACM SIGCOMM Conference",
+      "slug": "sigcomm",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "networks"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://conferences.sigcomm.org/sigcomm/2026/"
+    },
+    {
+      "short_name": "INFOCOM",
+      "name": "IEEE INFOCOM",
+      "slug": "infocom",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "networks"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://infocom2026.ieee-infocom.org/"
+    },
+    {
+      "short_name": "CoNEXT",
+      "name": "ACM International Conference on Emerging Networking Experiments and Technologies",
+      "slug": "conext",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "networks"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://conferences.sigcomm.org/co-next/2026/"
+    },
+    {
+      "short_name": "IMC",
+      "name": "ACM Internet Measurement Conference",
+      "slug": "imc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "internet measurement"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://conferences.sigcomm.org/imc/2026/"
+    },
+    {
+      "short_name": "MobiCom",
+      "name": "International Conference on Mobile Computing and Networking",
+      "slug": "mobicom",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "mobile systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM SIGMOBILE",
+      "website": "https://www.sigmobile.org/mobicom/2026/"
+    },
+    {
+      "short_name": "SenSys",
+      "name": "Conference on Embedded Networked Sensor Systems",
+      "slug": "sensys",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "sensor systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://sensys.acm.org/2026/"
+    },
+    {
+      "short_name": "MobiSys",
+      "name": "International Conference on Mobile Systems, Applications, and Services",
+      "slug": "mobisys",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "mobile systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://www.sigmobile.org/mobisys/2026/"
+    },
+    {
+      "short_name": "CCS",
+      "name": "ACM Conference on Computer and Communications Security",
+      "slug": "ccs",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "ACM",
+      "website": "https://www.sigsac.org/ccs/CCS2026/"
+    },
+    {
+      "short_name": "S&P",
+      "name": "IEEE Symposium on Security and Privacy",
+      "slug": "sp",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security",
+        "privacy"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.ieee-security.org/TC/SP2026/"
+    },
+    {
+      "short_name": "USENIX Security",
+      "name": "USENIX Security Symposium",
+      "slug": "usenix-security",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "USENIX",
+      "website": "https://www.usenix.org/conference/usenixsecurity26"
+    },
+    {
+      "short_name": "NDSS",
+      "name": "Network and Distributed System Security Symposium",
+      "slug": "ndss",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "ISOC",
+      "website": "https://www.ndss-symposium.org/ndss2026/"
+    },
+    {
+      "short_name": "PETS",
+      "name": "Privacy Enhancing Technologies Symposium",
+      "slug": "pets",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "privacy"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "PETS",
+      "website": "https://petsymposium.org/2026/"
+    },
+    {
+      "short_name": "ICSE",
+      "name": "International Conference on Software Engineering",
+      "slug": "icse",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE / ACM",
+      "website": "https://conf.researchr.org/home/icse-2026"
+    },
+    {
+      "short_name": "FSE",
+      "name": "ACM International Symposium on Foundations of Software Engineering",
+      "slug": "fse",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://conf.researchr.org/home/fse-2026"
+    },
+    {
+      "short_name": "ASE",
+      "name": "International Conference on Automated Software Engineering",
+      "slug": "ase",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE / ACM",
+      "website": "https://conf.researchr.org/home/ase-2026"
+    },
+    {
+      "short_name": "ISSTA",
+      "name": "International Symposium on Software Testing and Analysis",
+      "slug": "issta",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software testing"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://conf.researchr.org/home/issta-2026"
+    },
+    {
+      "short_name": "POPL",
+      "name": "Symposium on Principles of Programming Languages",
+      "slug": "popl",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "programming languages",
+        "theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://popl26.sigplan.org/"
+    },
+    {
+      "short_name": "PLDI",
+      "name": "Conference on Programming Language Design and Implementation",
+      "slug": "pldi",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "programming languages"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://pldi26.sigplan.org/"
+    },
+    {
+      "short_name": "OOPSLA",
+      "name": "Conference on Object-Oriented Programming, Systems, Languages, and Applications",
+      "slug": "oopsla",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "programming languages"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://2026.splashcon.org/track/splash-2026-oopsla"
+    },
+    {
+      "short_name": "ICFP",
+      "name": "International Conference on Functional Programming",
+      "slug": "icfp",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "functional programming"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://icfp26.sigplan.org/"
+    },
+    {
+      "short_name": "ECOOP",
+      "name": "European Conference on Object-Oriented Programming",
+      "slug": "ecoop",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "programming languages"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "AITO",
+      "website": "https://2026.ecoop.org/"
+    },
+    {
+      "short_name": "CAV",
+      "name": "Computer Aided Verification",
+      "slug": "cav",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "verification"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "CAV",
+      "website": "https://i-cav.org/2026/"
+    },
+    {
+      "short_name": "CHI",
+      "name": "Conference on Human Factors in Computing Systems",
+      "slug": "chi",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "hci"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://chi2026.acm.org/"
+    },
+    {
+      "short_name": "UIST",
+      "name": "Symposium on User Interface Software and Technology",
+      "slug": "uist",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "hci"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://uist.acm.org/2026/"
+    },
+    {
+      "short_name": "CSCW",
+      "name": "Conference on Computer-Supported Cooperative Work and Social Computing",
+      "slug": "cscw",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "hci",
+        "collaboration"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://cscw.acm.org/2026/"
+    },
+    {
+      "short_name": "UbiComp",
+      "name": "ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+      "slug": "ubicomp",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "ubiquitous computing"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://ubicomp.org/ubicomp-iswc-2026/"
+    },
+    {
+      "short_name": "IUI",
+      "name": "ACM Intelligent User Interfaces",
+      "slug": "iui",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "intelligent interfaces"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://iui.acm.org/2026/"
+    },
+    {
+      "short_name": "STOC",
+      "name": "Symposium on Theory of Computing",
+      "slug": "stoc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "theory",
+        "algorithms"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://acm-stoc.org/stoc2026/"
+    },
+    {
+      "short_name": "FOCS",
+      "name": "IEEE Symposium on Foundations of Computer Science",
+      "slug": "focs",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "IEEE",
+      "website": "https://focs.computer.org/2026/"
+    },
+    {
+      "short_name": "SODA",
+      "name": "ACM-SIAM Symposium on Discrete Algorithms",
+      "slug": "soda",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "algorithms"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "SIAM",
+      "website": "https://www.siam.org/conferences/cm/conference/soda26"
+    },
+    {
+      "short_name": "ICALP",
+      "name": "International Colloquium on Automata, Languages, and Programming",
+      "slug": "icalp",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "EATCS",
+      "website": "https://icalp2026.org/"
+    },
+    {
+      "short_name": "ITCS",
+      "name": "Innovations in Theoretical Computer Science",
+      "slug": "itcs",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ITCS",
+      "website": "https://itcs-conf.org/"
+    },
+    {
+      "short_name": "SoCG",
+      "name": "Symposium on Computational Geometry",
+      "slug": "socg",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "computational geometry"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://socg26.github.io/"
+    },
+    {
+      "short_name": "PODC",
+      "name": "Symposium on Principles of Distributed Computing",
+      "slug": "podc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "distributed computing"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://www.podc.org/podc2026/"
+    },
+    {
+      "short_name": "DISC",
+      "name": "International Symposium on Distributed Computing",
+      "slug": "disc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "distributed computing"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "DISC",
+      "website": "https://www.disc-conference.org/"
+    },
+    {
+      "short_name": "ICDCS",
+      "name": "International Conference on Distributed Computing Systems",
+      "slug": "icdcs",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "distributed systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://icdcs2026.icdcs.org/"
+    },
+    {
+      "short_name": "IPDPS",
+      "name": "International Parallel and Distributed Processing Symposium",
+      "slug": "ipdps",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "parallel computing"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.ipdps.org/"
+    },
+    {
+      "short_name": "SC",
+      "name": "International Conference for High Performance Computing, Networking, Storage, and Analysis",
+      "slug": "sc",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "high performance computing"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE / ACM",
+      "website": "https://sc26.supercomputing.org/"
+    },
+    {
+      "short_name": "IEEE VIS",
+      "name": "IEEE Visualization Conference",
+      "slug": "ieee-vis",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "visualization"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://ieeevis.org/year/2026/welcome"
+    },
+    {
+      "short_name": "DAC",
+      "name": "Design Automation Conference",
+      "slug": "dac",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "design automation"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM / IEEE",
+      "website": "https://www.dac.com/"
+    },
+    {
+      "short_name": "DATE",
+      "name": "Design, Automation and Test in Europe",
+      "slug": "date",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "hardware design"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "DATE",
+      "website": "https://www.date-conference.com/"
+    }
+  ]
+}

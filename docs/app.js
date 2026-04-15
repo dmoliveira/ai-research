@@ -209,6 +209,71 @@ function compareTier(a, b) {
   return (order[a] ?? 99) - (order[b] ?? 99);
 }
 
+function normalizeConference(item) {
+  const primary = item.primary_area_slug || "systems";
+  return {
+    tier: "A",
+    area: "Computer Science",
+    publisher: "",
+    website: "",
+    submission_url: "",
+    frequency: "Annual",
+    review_model: "Double-blind",
+    acceptance_rate: "—",
+    usual_deadline_window: "TBA",
+    next_deadline: "",
+    notification_date: "",
+    camera_ready_date: "",
+    event_date: "",
+    location: "TBA",
+    location_country: "",
+    status: "TBA",
+    tags: [],
+    notes: "Curated venue entry.",
+    edition_log: [],
+    subareas: [],
+    subarea_slugs: [],
+    area_strengths: { [primary]: "core" },
+    ...item,
+    primary_area_slug: primary,
+    tags: item.tags || [],
+    subareas: item.subareas || [],
+    subarea_slugs: item.subarea_slugs || [],
+    edition_log: item.edition_log || [],
+    area_strengths: item.area_strengths || { [primary]: "core" }
+  };
+}
+
+function normalizeJournal(item) {
+  const primary = item.primary_area_slug || "systems";
+  return {
+    tier: "A",
+    area: "Computer Science",
+    publisher: "",
+    website: "",
+    submission_url: "",
+    oa_model: "Hybrid",
+    frequency: "Quarterly",
+    review_speed: "Moderate",
+    impact_note: "Curated journal entry",
+    latest_issue: "Latest issue TBA",
+    latest_publication_date: "",
+    tags: [],
+    notes: "Curated venue entry.",
+    issue_log: [],
+    subareas: [],
+    subarea_slugs: [],
+    area_strengths: { [primary]: "core" },
+    ...item,
+    primary_area_slug: primary,
+    tags: item.tags || [],
+    subareas: item.subareas || [],
+    subarea_slugs: item.subarea_slugs || [],
+    issue_log: item.issue_log || [],
+    area_strengths: item.area_strengths || { [primary]: "core" }
+  };
+}
+
 function formatDate(value) {
   if (!value) return "Rolling / TBA";
   const date = new Date(value);
@@ -723,18 +788,22 @@ async function main() {
   initCurrentNav();
   initTopbarQuickSearch();
   syncTopbarOffset();
-  const [meta, conferenceData, journalData, cfpData, featuredData, areaData] = await Promise.all([
+  const [meta, conferenceData, conferenceExtraData, journalData, journalExtraData, cfpData, featuredData, areaData] = await Promise.all([
     loadJson("./data/meta.json"),
     loadJson("./data/conferences.json"),
+    loadJson("./data/conferences_extra.json"),
     loadJson("./data/journals.json"),
+    loadJson("./data/journals_extra.json"),
     loadJson("./data/cfps.json"),
     loadJson("./data/featured.json"),
     loadJson("./data/areas.json")
   ]);
-  const conferences = conferenceData.conferences;
-  const journals = journalData.journals;
+  const conferences = conferenceData.conferences.concat(conferenceExtraData.conferences).map(normalizeConference);
+  const journals = journalData.journals.concat(journalExtraData.journals).map(normalizeJournal);
   const cfps = cfpData.cfps;
   const areas = areaData.areas;
+  meta.coverage.conferences = conferences.length;
+  meta.coverage.journals = journals.length;
   const venues = venueMap(conferences, journals);
 
   renderMeta(meta);

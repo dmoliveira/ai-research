@@ -1,0 +1,648 @@
+{
+  "journals": [
+    {
+      "short_name": "AI",
+      "name": "Artificial Intelligence",
+      "slug": "ai-journal",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "artificial intelligence"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/artificial-intelligence"
+    },
+    {
+      "short_name": "Neural Computation",
+      "name": "Neural Computation",
+      "slug": "neural-computation",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "neural computation"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "MIT Press",
+      "website": "https://direct.mit.edu/neco"
+    },
+    {
+      "short_name": "TNNLS",
+      "name": "IEEE Transactions on Neural Networks and Learning Systems",
+      "slug": "ieee-tnnls",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "machine learning"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "IEEE",
+      "website": "https://cis.ieee.org/publications/t-neural-networks-and-learning-systems"
+    },
+    {
+      "short_name": "TASLP",
+      "name": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+      "slug": "ieee-taslp",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "nlp",
+      "subareas": [
+        "speech",
+        "language"
+      ],
+      "subarea_slugs": [
+        "nlp"
+      ],
+      "publisher": "IEEE / ACM",
+      "website": "https://signalprocessingsociety.org/publications-resources/ieeeacm-transactions-audio-speech-and-language-processing"
+    },
+    {
+      "short_name": "Nature MI",
+      "name": "Nature Machine Intelligence",
+      "slug": "nature-machine-intelligence",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "machine intelligence"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "Nature",
+      "website": "https://www.nature.com/natmachintell/"
+    },
+    {
+      "short_name": "MIR",
+      "name": "Machine Intelligence Research",
+      "slug": "machine-intelligence-research",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "machine-learning",
+      "subareas": [
+        "AI",
+        "machine learning"
+      ],
+      "subarea_slugs": [
+        "machine-learning"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/11633"
+    },
+    {
+      "short_name": "CSUR",
+      "name": "ACM Computing Surveys",
+      "slug": "acm-computing-surveys",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "computer science surveys"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/csur"
+    },
+    {
+      "short_name": "TOCHI",
+      "name": "ACM Transactions on Computer-Human Interaction",
+      "slug": "tochi",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "hci"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/tochi"
+    },
+    {
+      "short_name": "IJHCS",
+      "name": "International Journal of Human-Computer Studies",
+      "slug": "ijhcs",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "hci"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies"
+    },
+    {
+      "short_name": "DKE",
+      "name": "Data & Knowledge Engineering",
+      "slug": "data-knowledge-engineering",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "data-mining",
+      "subareas": [
+        "data engineering"
+      ],
+      "subarea_slugs": [
+        "data-mining"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/data-and-knowledge-engineering"
+    },
+    {
+      "short_name": "KAIS",
+      "name": "Knowledge and Information Systems",
+      "slug": "kais",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "data-mining",
+      "subareas": [
+        "knowledge systems"
+      ],
+      "subarea_slugs": [
+        "data-mining"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/10115"
+    },
+    {
+      "short_name": "IPM",
+      "name": "Information Processing & Management",
+      "slug": "information-processing-management",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "information retrieval"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/information-processing-and-management"
+    },
+    {
+      "short_name": "IRJ",
+      "name": "Information Retrieval Journal",
+      "slug": "information-retrieval-journal",
+      "tier": "A",
+      "area": "Data Science",
+      "primary_area_slug": "information-retrieval",
+      "subareas": [
+        "information retrieval"
+      ],
+      "subarea_slugs": [
+        "information-retrieval"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/10791"
+    },
+    {
+      "short_name": "VLDBJ",
+      "name": "The VLDB Journal",
+      "slug": "vldb-journal",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "databases"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/778"
+    },
+    {
+      "short_name": "TODS",
+      "name": "ACM Transactions on Database Systems",
+      "slug": "tods",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "databases"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/tods"
+    },
+    {
+      "short_name": "TPDS",
+      "name": "IEEE Transactions on Parallel and Distributed Systems",
+      "slug": "tpds",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "distributed systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.computer.org/csdl/journal/td"
+    },
+    {
+      "short_name": "TON",
+      "name": "IEEE/ACM Transactions on Networking",
+      "slug": "ton",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "networks"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE / ACM",
+      "website": "https://www.comsoc.org/publications/journals/ieeeacm-transactions-networking"
+    },
+    {
+      "short_name": "JSS",
+      "name": "Journal of Systems and Software",
+      "slug": "journal-systems-software",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/journal-of-systems-and-software"
+    },
+    {
+      "short_name": "TSE",
+      "name": "IEEE Transactions on Software Engineering",
+      "slug": "tse",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.computer.org/csdl/journal/ts"
+    },
+    {
+      "short_name": "EMSE",
+      "name": "Empirical Software Engineering",
+      "slug": "empirical-software-engineering",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/10664"
+    },
+    {
+      "short_name": "IST",
+      "name": "Information and Software Technology",
+      "slug": "information-software-technology",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/information-and-software-technology"
+    },
+    {
+      "short_name": "TOSEM",
+      "name": "ACM Transactions on Software Engineering and Methodology",
+      "slug": "tosem",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/tosem"
+    },
+    {
+      "short_name": "SPE",
+      "name": "Software: Practice and Experience",
+      "slug": "software-practice-experience",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "software engineering"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Wiley",
+      "website": "https://onlinelibrary.wiley.com/journal/1097024x"
+    },
+    {
+      "short_name": "TOPLAS",
+      "name": "ACM Transactions on Programming Languages and Systems",
+      "slug": "toplas",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "programming languages"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/toplas"
+    },
+    {
+      "short_name": "Distributed Computing",
+      "name": "Distributed Computing",
+      "slug": "distributed-computing",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "distributed systems"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/445"
+    },
+    {
+      "short_name": "JoC",
+      "name": "Journal of Cryptology",
+      "slug": "journal-of-cryptology",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "cryptography"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/145"
+    },
+    {
+      "short_name": "Computers & Security",
+      "name": "Computers & Security",
+      "slug": "computers-security",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/computers-and-security"
+    },
+    {
+      "short_name": "TOPS",
+      "name": "ACM Transactions on Privacy and Security",
+      "slug": "tops",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "privacy",
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/tops"
+    },
+    {
+      "short_name": "TIFS",
+      "name": "IEEE Transactions on Information Forensics and Security",
+      "slug": "tifs",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "IEEE",
+      "website": "https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security"
+    },
+    {
+      "short_name": "JCS",
+      "name": "Journal of Computer Security",
+      "slug": "journal-of-computer-security",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "security",
+      "subareas": [
+        "security"
+      ],
+      "subarea_slugs": [
+        "security"
+      ],
+      "publisher": "IOS Press",
+      "website": "https://www.iospress.com/catalog/journals/journal-of-computer-security"
+    },
+    {
+      "short_name": "SICOMP",
+      "name": "SIAM Journal on Computing",
+      "slug": "sicomp",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "SIAM",
+      "website": "https://epubs.siam.org/journal/smjcat"
+    },
+    {
+      "short_name": "JACM",
+      "name": "Journal of the ACM",
+      "slug": "jacm",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "theory"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/jacm"
+    },
+    {
+      "short_name": "Algorithmica",
+      "name": "Algorithmica",
+      "slug": "algorithmica",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "theory",
+      "subareas": [
+        "algorithms"
+      ],
+      "subarea_slugs": [
+        "theory"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/453"
+    },
+    {
+      "short_name": "TOG",
+      "name": "ACM Transactions on Graphics",
+      "slug": "tog",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "graphics"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "ACM",
+      "website": "https://dl.acm.org/journal/tog"
+    },
+    {
+      "short_name": "CVIU",
+      "name": "Computer Vision and Image Understanding",
+      "slug": "cviu",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "computer vision"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/computer-vision-and-image-understanding"
+    },
+    {
+      "short_name": "MedIA",
+      "name": "Medical Image Analysis",
+      "slug": "medical-image-analysis",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "computer-vision",
+      "subareas": [
+        "medical imaging"
+      ],
+      "subarea_slugs": [
+        "computer-vision"
+      ],
+      "publisher": "Elsevier",
+      "website": "https://www.sciencedirect.com/journal/medical-image-analysis"
+    },
+    {
+      "short_name": "Autonomous Robots",
+      "name": "Autonomous Robots",
+      "slug": "autonomous-robots",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robotics"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "Springer",
+      "website": "https://www.springer.com/journal/10514"
+    },
+    {
+      "short_name": "RA-L",
+      "name": "IEEE Robotics and Automation Letters",
+      "slug": "ieee-ral",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robotics"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.ieee-ras.org/publications/ra-l"
+    },
+    {
+      "short_name": "T-RO",
+      "name": "IEEE Transactions on Robotics",
+      "slug": "ieee-tro",
+      "tier": "A",
+      "area": "AI/ML",
+      "primary_area_slug": "robotics",
+      "subareas": [
+        "robotics"
+      ],
+      "subarea_slugs": [
+        "robotics"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.ieee-ras.org/publications/t-ro"
+    },
+    {
+      "short_name": "TVCG",
+      "name": "IEEE Transactions on Visualization and Computer Graphics",
+      "slug": "tvcg",
+      "tier": "A",
+      "area": "Computer Science",
+      "primary_area_slug": "systems",
+      "subareas": [
+        "visualization",
+        "graphics"
+      ],
+      "subarea_slugs": [
+        "systems"
+      ],
+      "publisher": "IEEE",
+      "website": "https://www.computer.org/csdl/journal/tg"
+    }
+  ]
+}
