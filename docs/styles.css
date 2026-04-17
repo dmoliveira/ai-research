@@ -420,6 +420,12 @@ tbody tr:first-child td { padding-top: 18px; }
 .compare-shell:empty,
 #watchlist-grid:empty { display: none; }
 .compare-status:empty { display: none; }
+.compare-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 .compare-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
