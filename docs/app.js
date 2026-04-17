@@ -636,6 +636,7 @@ function renderFeatured(featured, confs, journals) {
   el.innerHTML = featured.featured.map((entry) => {
     const item = map.get(entry.slug);
     if (!item) return "";
+    const topTags = (item.subareas?.slice(0, 2) || item.tags?.slice(0, 2) || []);
     return `
       <article class="venue-card stack-sm">
         <div class="inline-meta">
@@ -643,11 +644,11 @@ function renderFeatured(featured, confs, journals) {
           <span class="badge">${escapeHtml(item.type === "conference" ? "Conference" : "Journal")}</span>
           <span class="badge">${escapeHtml(item.area)}</span>
         </div>
-        <h3>${internalVenueLink(item)}</h3>
-        <p class="muted">${escapeHtml(item.notes || "")}</p>
+        <h3 class="featured-title">${internalVenueLink(item)}</h3>
+        <p class="featured-subline">${escapeHtml(item.notes || "Strong venue in this area.")}</p>
         ${item.type === "conference" ? `<div class="meta-list"><div class="meta-row">📍 ${formatLocation(item.location, item.location_country)}</div><div class="meta-row">🗓 ${formatDate(item.event_date)}</div></div>` : `<div class="meta-list"><div class="meta-row">🏢 ${escapeHtml(item.publisher)}</div><div class="meta-row">📰 ${escapeHtml(item.latest_issue || "Latest issue TBA")}</div></div>`}
-        <div>${tagList(item.subareas?.slice(0, 3) || item.tags || [])}</div>
-        ${renderTrustChips(item)}
+        <div>${tagList(topTags)}</div>
+        ${renderTrustInline(item)}
         <div class="actions">
           ${miniLink("Site", item.website, "🌐")}
           ${miniLink(item.type === "conference" ? "Submit" : "Author info", item.submission_url, item.type === "conference" ? "📝" : "✍️")}

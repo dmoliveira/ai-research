@@ -191,20 +191,20 @@ main, .hero, .footer, .narrow { max-width: 1240px; margin: 0 auto; padding: 24px
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 36px;
+  gap: 28px;
   align-items: center;
-  min-height: calc(72vh - 100px);
-  padding-top: 40px;
-  padding-bottom: 36px;
+  min-height: calc(56vh - 100px);
+  padding-top: 26px;
+  padding-bottom: 18px;
 }
 .hero-copy { max-width: 720px; }
-.hero-art { width: 100%; max-height: 380px; }
+.hero-art { width: 100%; max-height: 320px; }
 .eyebrow { text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-size: .78rem; margin: 0 0 10px; }
 h1, h2, h3 { line-height: 1.1; }
 h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); margin: .2rem 0 1rem; letter-spacing: -0.03em; }
 h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin: 0; letter-spacing: -0.02em; }
 h3 { font-size: 1.15rem; margin: 0 0 .5rem; }
-.hero-copy > p:not(.eyebrow) { font-size: 1.08rem; line-height: 1.65; color: var(--muted); max-width: 60ch; }
+.hero-copy > p:not(.eyebrow) { font-size: 1rem; line-height: 1.58; color: var(--muted); max-width: 58ch; }
 .hero-note { max-width: 62ch; }
 .badge, .tag, .status-badge {
   border: 1px solid var(--line);
@@ -228,6 +228,9 @@ h3 { font-size: 1.15rem; margin: 0 0 .5rem; }
   margin-bottom: 24px;
   box-shadow: var(--shadow);
 }
+.panel-compact { padding-top: 18px; padding-bottom: 18px; }
+.live-pulse-grid { align-items: start; }
+.compact-split { grid-template-columns: 1fr 1fr; gap: 12px; }
 .panel-inline {
   margin-top: 16px;
   padding: 16px 18px;
@@ -324,6 +327,15 @@ tbody tr:first-child td { padding-top: 18px; }
   border-radius: 18px;
   padding: 16px;
   background: color-mix(in srgb, var(--panel-solid) 92%, transparent);
+}
+.featured-title {
+  font-size: 1.35rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+.featured-subline {
+  color: var(--muted);
+  font-size: .9rem;
 }
 .venue-card .actions,
 .deadline-card .actions,
