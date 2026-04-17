@@ -841,14 +841,14 @@ function initConferencePage(conferences) {
     body.innerHTML = pagedRows.map((item) => `
       <tr>
         <td data-label="Tier">${escapeHtml(item.tier)}</td>
-        <td data-label="Conference">${internalVenueLink(item)}<div class="muted">${escapeHtml(item.name)}</div>${renderTrustInline(item)}</td>
-        <td data-label="Area">${escapeHtml(item.area)}<div class="muted">${tagList(item.subareas || [])}</div></td>
+        <td data-label="Conference">${internalVenueLink(item)}<div class="row-subline">${escapeHtml(item.name)}</div>${renderTrustInline(item)}</td>
+        <td data-label="Area">${escapeHtml(item.area)}<div class="row-subline">${escapeHtml((item.subareas || []).slice(0, 3).join(" · ") || "General scope")}</div></td>
         <td data-label="Deadline">${formatDate(item.next_deadline)}<div class="muted">${relativeDeadlineLabel(item.next_deadline)}</div></td>
         <td data-label="Event">${formatDate(item.event_date)}<div class="muted">${formatLocation(item.location, item.location_country)}</div></td>
         <td data-label="Frequency">${escapeHtml(item.frequency)}</td>
         <td data-label="Acceptance">${escapeHtml(item.acceptance_rate)}</td>
         <td data-label="Status">${statusBadge(item.status)}</td>
-        <td data-label="Links">${link("Site", item.website)} · ${link("Submit", item.submission_url)} · ${link("Proceedings", latestProceedings(item))}<div class="action-cluster"><button class="tiny-button" data-save-venue="${escapeHtml(item.slug)}">Save</button><button class="tiny-button" data-compare-venue="${escapeHtml(item.slug)}">Compare</button></div></td>
+        <td data-label="Links"><div class="row-links">${miniLink("Site", item.website, "🌐")}${miniLink("Submit", item.submission_url, "📝")}${miniLink("Proceedings", latestProceedings(item), "📄")}</div><div class="row-actions"><button class="tiny-button" data-save-venue="${escapeHtml(item.slug)}">Save</button><button class="tiny-button" data-compare-venue="${escapeHtml(item.slug)}">Compare</button></div></td>
       </tr>
     `).join("");
     logGrid.innerHTML = rows.slice(0, 6).map((item) => {
@@ -930,14 +930,14 @@ function initJournalPage(journals) {
     body.innerHTML = pagedRows.map((item) => `
       <tr>
         <td data-label="Tier">${escapeHtml(item.tier)}</td>
-        <td data-label="Journal">${internalVenueLink(item)}<div class="muted">${escapeHtml(item.name)}</div>${renderTrustInline(item)}</td>
-        <td data-label="Area">${escapeHtml(item.area)}<div class="muted">${tagList(item.subareas || [])}</div></td>
+        <td data-label="Journal">${internalVenueLink(item)}<div class="row-subline">${escapeHtml(item.name)}</div>${renderTrustInline(item)}</td>
+        <td data-label="Area">${escapeHtml(item.area)}<div class="row-subline">${escapeHtml((item.subareas || []).slice(0, 3).join(" · ") || "General scope")}</div></td>
         <td data-label="Publisher">${escapeHtml(item.publisher)}</td>
         <td data-label="OA model">${escapeHtml(item.oa_model)}</td>
         <td data-label="Frequency">${escapeHtml(item.frequency)}</td>
         <td data-label="Review speed">${escapeHtml(item.review_speed)}</td>
         <td data-label="Latest issue">${escapeHtml(item.latest_issue)}<div class="muted">${formatDate(item.latest_publication_date)}</div></td>
-        <td data-label="Links">${link("Site", item.website)} · ${link("Submit", item.submission_url)} · ${link("Issue", item.issue_log?.[0]?.issue_url)}<div class="action-cluster"><button class="tiny-button" data-save-venue="${escapeHtml(item.slug)}">Save</button><button class="tiny-button" data-compare-venue="${escapeHtml(item.slug)}">Compare</button></div></td>
+        <td data-label="Links"><div class="row-links">${miniLink("Site", item.website, "🌐")}${miniLink("Submit", item.submission_url, "✍️")}${miniLink("Issue", item.issue_log?.[0]?.issue_url, "📰")}</div><div class="row-actions"><button class="tiny-button" data-save-venue="${escapeHtml(item.slug)}">Save</button><button class="tiny-button" data-compare-venue="${escapeHtml(item.slug)}">Compare</button></div></td>
       </tr>
     `).join("");
     logGrid.innerHTML = rows.slice(0, 6).map((item) => {
