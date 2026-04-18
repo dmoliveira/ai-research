@@ -679,7 +679,7 @@ tbody tr:first-child td { padding-top: 18px; }
   tr {
     border: 1px solid var(--line);
     border-radius: 16px;
-    padding: 8px 12px;
+    padding: 12px 14px;
     background: color-mix(in srgb, var(--panel-solid) 92%, transparent);
     box-shadow: var(--shadow);
   }
@@ -692,5 +692,45 @@ tbody tr:first-child td { padding-top: 18px; }
     font-size: .76rem;
     text-transform: uppercase;
     letter-spacing: .08em;
+  }
+  td[data-label="Conference"],
+  td[data-label="Journal"] {
+    padding-top: 0;
+  }
+  td[data-label="Conference"] .detail-title-link,
+  td[data-label="Journal"] .detail-title-link {
+    font-size: 1.08rem;
+    font-weight: 700;
+  }
+  td[data-label="Conference"] .row-subline,
+  td[data-label="Journal"] .row-subline {
+    font-size: .9rem;
+  }
+  td[data-label="Links"] {
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    margin-top: 6px;
+  }
+  .row-links,
+  .row-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .row-links .mini-link,
+  .row-actions .tiny-button {
+    width: 100%;
+    justify-content: center;
+  }
+  td[data-label="Tier"],
+  td[data-label="Status"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 12px;
+    vertical-align: top;
+  }
+  td[data-label="Tier"]::before,
+  td[data-label="Status"]::before {
+    margin-bottom: 2px;
   }
 }
