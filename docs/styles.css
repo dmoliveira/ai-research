@@ -231,6 +231,11 @@ h3 { font-size: 1.15rem; margin: 0 0 .5rem; }
 .panel-compact { padding-top: 18px; padding-bottom: 18px; }
 .live-pulse-grid { align-items: start; }
 .compact-split { grid-template-columns: 1fr 1fr; gap: 12px; }
+.trust-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
 .panel-inline {
   margin-top: 16px;
   padding: 16px 18px;
