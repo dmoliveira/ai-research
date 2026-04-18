@@ -476,7 +476,28 @@ function renderCompareTray(targetId, type, rows) {
   const el = document.getElementById(targetId);
   if (!el) return;
   const selected = compareItems(type).map((slug) => rows.find((item) => item.slug === slug)).filter(Boolean);
-  el.innerHTML = selected.length ? `<div class="stack-sm"><div><div class="compare-title">Compare ${type === "conference" ? "conferences" : "journals"}</div><div class="compare-hint">You can compare up to 4 venues at once.</div></div><div class="compare-grid">${selected.map((item) => `<article class="compare-card stack-sm"><strong>${escapeHtml(item.short_name)}</strong><p class="muted">${escapeHtml(item.area)} · ${escapeHtml(item.tier)}</p><p class="muted">${type === "conference" ? `${formatDate(item.next_deadline)} · ${escapeHtml(item.acceptance_rate)}` : `${escapeHtml(item.latest_issue)} · ${escapeHtml(item.review_speed)}`}</p><div class="action-cluster"><button class="tiny-button" data-remove-compare="${escapeHtml(item.slug)}">Remove</button></div></article>`).join("")}</div></div>` : "";
+  if (!selected.length) {
+    el.innerHTML = "";
+    return;
+  }
+  const fieldRows = type === "conference"
+    ? [
+        ["Venue", (item) => `<strong>${escapeHtml(item.short_name)}</strong><div class="muted">${escapeHtml(item.area)} · ${escapeHtml(item.tier)}</div>`],
+        ["Deadline", (item) => `${formatDate(item.next_deadline)}<div class="muted">${relativeDeadlineLabel(item.next_deadline)}</div>`],
+        ["Event", (item) => `${formatDate(item.event_date)}<div class="muted">${formatLocation(item.location, item.location_country)}</div>`],
+        ["Acceptance", (item) => escapeHtml(item.acceptance_rate)],
+        ["Review", (item) => escapeHtml(item.review_model)],
+        ["Actions", (item) => `<div class="action-cluster">${miniLink("Venue", venueDetailUrl(item), "🔍").replace('target="_blank" rel="noreferrer"','')}${miniLink("Submit", item.submission_url, "📝")}<button class="tiny-button" data-remove-compare="${escapeHtml(item.slug)}">Remove</button></div>`]
+      ]
+    : [
+        ["Venue", (item) => `<strong>${escapeHtml(item.short_name)}</strong><div class="muted">${escapeHtml(item.area)} · ${escapeHtml(item.tier)}</div>`],
+        ["Latest issue", (item) => `${escapeHtml(item.latest_issue)}<div class="muted">${formatDate(item.latest_publication_date)}</div>`],
+        ["Review speed", (item) => escapeHtml(item.review_speed)],
+        ["OA model", (item) => escapeHtml(item.oa_model)],
+        ["Frequency", (item) => escapeHtml(item.frequency)],
+        ["Actions", (item) => `<div class="action-cluster">${miniLink("Venue", venueDetailUrl(item), "🔍").replace('target="_blank" rel="noreferrer"','')}${miniLink("Submit", item.submission_url, "✍️")}<button class="tiny-button" data-remove-compare="${escapeHtml(item.slug)}">Remove</button></div>`]
+      ];
+  el.innerHTML = `<div class="stack-sm"><div><div class="compare-title">Compare ${type === "conference" ? "conferences" : "journals"}</div><div class="compare-hint">You can compare up to 4 venues at once.</div></div><div class="compare-table">${fieldRows.map(([label, render]) => `<div class="compare-row"><div class="compare-label">${label}</div>${selected.map((item) => `<div class="compare-value">${render(item)}</div>`).join("")}</div>`).join("")}</div></div>`;
   el.querySelectorAll("[data-remove-compare]").forEach((button) => {
     button.addEventListener("click", () => {
       const state = loadStored(COMPARE_KEY, { conference: [], journal: [] });

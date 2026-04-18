@@ -478,6 +478,30 @@ tbody tr:first-child td { padding-top: 18px; }
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
 }
+.compare-table {
+  display: grid;
+  gap: 10px;
+}
+.compare-row {
+  display: grid;
+  grid-template-columns: 140px repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+.compare-label {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding-top: 8px;
+}
+.compare-value {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--panel-solid) 92%, transparent);
+}
 .compare-title {
   font-weight: 700;
   font-size: .95rem;
@@ -721,6 +745,9 @@ tbody tr:first-child td { padding-top: 18px; }
   .row-actions .tiny-button {
     width: 100%;
     justify-content: center;
+  }
+  .compare-row {
+    grid-template-columns: 1fr;
   }
   td[data-label="Tier"],
   td[data-label="Status"] {
