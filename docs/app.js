@@ -887,6 +887,7 @@ function initConferencePage(conferences) {
   const sort = document.getElementById("conference-sort");
   const count = document.getElementById("conference-count");
   const total = document.getElementById("conference-total");
+  const quickChips = document.getElementById("conference-quick-chips");
   const logGrid = document.getElementById("conference-log-grid");
   const trendGrid = document.getElementById("conference-trend-grid");
   const pagerTop = document.getElementById("conference-pagination-top");
@@ -963,6 +964,27 @@ function initConferencePage(conferences) {
 
   [search, area, status, tier, sort].forEach((element) => element.addEventListener("input", () => { page = 1; draw(); }));
   [area, status, tier, sort].forEach((element) => element.addEventListener("change", () => { page = 1; draw(); }));
+  quickChips?.querySelectorAll(".filter-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      if (chip.dataset.reset) {
+        area.value = "";
+        status.value = "";
+        tier.value = "";
+      } else {
+        if (chip.dataset.area) area.value = area.value === chip.dataset.area ? "" : chip.dataset.area;
+        if (chip.dataset.status) status.value = status.value === chip.dataset.status ? "" : chip.dataset.status;
+        if (chip.dataset.tier) tier.value = tier.value === chip.dataset.tier ? "" : chip.dataset.tier;
+      }
+      quickChips.querySelectorAll(".filter-chip").forEach((button) => {
+        const active = (!!button.dataset.area && area.value === button.dataset.area)
+          || (!!button.dataset.status && status.value === button.dataset.status)
+          || (!!button.dataset.tier && tier.value === button.dataset.tier);
+        button.classList.toggle("is-active", active);
+      });
+      page = 1;
+      draw();
+    });
+  });
   draw();
 }
 
@@ -976,6 +998,7 @@ function initJournalPage(journals) {
   const sort = document.getElementById("journal-sort");
   const count = document.getElementById("journal-count");
   const total = document.getElementById("journal-total");
+  const quickChips = document.getElementById("journal-quick-chips");
   const logGrid = document.getElementById("journal-log-grid");
   const pagerTop = document.getElementById("journal-pagination-top");
   const pagerBottom = document.getElementById("journal-pagination-bottom");
@@ -1051,6 +1074,30 @@ function initJournalPage(journals) {
 
   [search, area, oa, tier, sort].forEach((element) => element.addEventListener("input", () => { page = 1; draw(); }));
   [area, oa, tier, sort].forEach((element) => element.addEventListener("change", () => { page = 1; draw(); }));
+  quickChips?.querySelectorAll(".filter-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      if (chip.dataset.reset) {
+        area.value = "";
+        oa.value = "";
+        tier.value = "";
+        sort.value = "name-asc";
+      } else {
+        if (chip.dataset.area) area.value = area.value === chip.dataset.area ? "" : chip.dataset.area;
+        if (chip.dataset.oa) oa.value = oa.value === chip.dataset.oa ? "" : chip.dataset.oa;
+        if (chip.dataset.tier) tier.value = tier.value === chip.dataset.tier ? "" : chip.dataset.tier;
+        if (chip.dataset.review) sort.value = chip.dataset.review === "Fast" ? (sort.value === "review-asc" ? "name-asc" : "review-asc") : sort.value;
+      }
+      quickChips.querySelectorAll(".filter-chip").forEach((button) => {
+        const active = (!!button.dataset.area && area.value === button.dataset.area)
+          || (!!button.dataset.oa && oa.value === button.dataset.oa)
+          || (!!button.dataset.tier && tier.value === button.dataset.tier)
+          || (!!button.dataset.review && sort.value === "review-asc");
+        button.classList.toggle("is-active", active);
+      });
+      page = 1;
+      draw();
+    });
+  });
   draw();
 }
 

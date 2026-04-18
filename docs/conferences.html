@@ -41,6 +41,14 @@
           <select id="conference-sort"><option value="deadline-asc">Nearest deadline</option><option value="name-asc">Name A–Z</option><option value="tier-asc">Tier</option><option value="acceptance-desc">Acceptance rate</option></select>
         </div>
         <p id="conference-count" class="muted"></p>
+        <div class="chip-row" id="conference-quick-chips">
+          <button type="button" class="chip filter-chip" data-tier="A+">A+ only</button>
+          <button type="button" class="chip filter-chip" data-status="Open">Open</button>
+          <button type="button" class="chip filter-chip" data-status="Soon">Soon</button>
+          <button type="button" class="chip filter-chip" data-area="AI/ML">AI/ML</button>
+          <button type="button" class="chip filter-chip" data-area="Data Science">Data Science</button>
+          <button type="button" class="chip filter-chip" data-reset="true">Reset</button>
+        </div>
         <div id="conference-compare-status" class="headline-meta"></div>
         <div id="conference-compare" class="panel-inline compare-shell"></div>
         <div id="conference-pagination-top" class="pagination-bar"></div>

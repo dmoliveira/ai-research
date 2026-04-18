@@ -41,6 +41,14 @@
           <select id="journal-sort"><option value="name-asc">Name A–Z</option><option value="tier-asc">Tier</option><option value="latest-desc">Latest publication</option><option value="review-asc">Review speed</option></select>
         </div>
         <p id="journal-count" class="muted"></p>
+        <div class="chip-row" id="journal-quick-chips">
+          <button type="button" class="chip filter-chip" data-tier="A+">A+ only</button>
+          <button type="button" class="chip filter-chip" data-oa="Open Access">Open access</button>
+          <button type="button" class="chip filter-chip" data-review="Fast">Fast review</button>
+          <button type="button" class="chip filter-chip" data-area="AI/ML">AI/ML</button>
+          <button type="button" class="chip filter-chip" data-area="Data Science">Data Science</button>
+          <button type="button" class="chip filter-chip" data-reset="true">Reset</button>
+        </div>
         <div id="journal-compare-status" class="headline-meta"></div>
         <div id="journal-compare" class="panel-inline compare-shell"></div>
         <div id="journal-pagination-top" class="pagination-bar"></div>
